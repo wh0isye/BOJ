@@ -11,18 +11,16 @@ int main() {
     if (num <= 0) {
         cout << count << endl;
     } else {
-        if (num / (A - B) == 0) {
-            count++;
+        // 2 1 5와 같은 경우를 위한 코드
+        if (num % (A - B) == 0) {
+            count += num / (A - B);
             cout << count << endl;
-        } else {
-            if (num % (A - B) == 0) {
-                count += num / (A - B);
-                cout << count << endl;
-            } else {
-                count++;
-                count += num / (A - B);
-                cout << count << endl;
-            }
+        }
+        // 5 2 10과 같은 경우를 위한 코드
+        else {
+            count++;
+            count += num / (A - B);
+            cout << count << endl;
         }
     }
 }
