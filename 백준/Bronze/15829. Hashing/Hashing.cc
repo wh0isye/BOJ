@@ -19,7 +19,7 @@ int main() {
             tmp = s[i] - 'a' + 1;
         } else {
             tmp = ((s[i] - 'a' + 1) * (unit % mod)) % mod;
-            unit *= 31;
+            unit = (unit * 31) % mod;
         }
         number[i] = tmp;
     }
