@@ -25,6 +25,7 @@ int main() {
         int test;
         cin >> test;
 
+        // set STL 공부하기
         if (number.find(test) != number.end()) {
             cout << 1 << '\n';
         } else {
